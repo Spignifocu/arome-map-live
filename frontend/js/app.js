@@ -378,7 +378,9 @@
   function updatePointNow(){
     if(!pointState.active) return;
     const s = A.sample('wind', pointState.lat, pointState.lon, state.step);
+    const gustKt = A.sample('gust', pointState.lat, pointState.lon, state.step);
     document.getElementById('point-now-value').innerHTML = `${s.speedKt.toFixed(0)} <span class="unit">nds</span>`;
+    document.getElementById('point-now-gust-value').innerHTML = `${gustKt.toFixed(0)} <span class="unit">nds</span>`;
     document.getElementById('point-now-dir').style.setProperty('--dir', s.dirDeg+'deg');
   }
 
