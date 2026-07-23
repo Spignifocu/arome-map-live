@@ -359,7 +359,7 @@
   function openPointPanel(lat, lon, forcedName){
     pointState.active = true; pointState.lat=lat; pointState.lon=lon;
     pointPanel.classList.remove('hidden');
-    const name = forcedName || A.nearestLocationName(lat,lon) || 'Point sélectionné';
+    const name = forcedName || A.nearestLocationName(lat,lon) || 'Spot';
     document.getElementById('point-name').textContent = name;
     document.getElementById('point-coords').textContent = `${lat.toFixed(3)}°N, ${lon.toFixed(3)}°E`;
 
